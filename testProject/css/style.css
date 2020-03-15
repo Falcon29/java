@@ -1,0 +1,235 @@
+/* work-sans-regular - latin */
+@font-face {
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/work-sans-v5-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local('Work Sans'), local('WorkSans-Regular'),
+         url('../fonts/work-sans-v5-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/work-sans-v5-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/work-sans-v5-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/work-sans-v5-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/work-sans-v5-latin-regular.svg#WorkSans') format('svg'); /* Legacy iOS */
+  }
+
+  /* pt-sans-regular - latin */
+@font-face {
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/pt-sans-v11-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local('PT Sans'), local('PTSans-Regular'),
+         url('../fonts/pt-sans-v11-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/pt-sans-v11-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/pt-sans-v11-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/pt-sans-v11-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/pt-sans-v11-latin-regular.svg#PTSans') format('svg'); /* Legacy iOS */
+  }
+
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    background: #F4F5FC;
+}
+
+h2, p, a, span, input {
+    font-family: Work Sans;
+}
+
+p, span {
+    letter-spacing: -0.37px;
+}
+
+h1 {
+    font-weight: normal;
+    display: block;
+    font-family: PT Sans;
+    font-size: 49px;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    color: #FFFFFF;
+    top: 100%;
+    left: 100%;
+    transform: translateY(-100%) rotate(270deg);
+    transform-origin: left bottom;
+    margin: 0;
+    padding: .5rem 1.5rem;
+    position: absolute;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: -0.46px;
+    margin-bottom: 0;
+}
+
+p {
+    font-weight: 300;
+    font-size: 14px;
+    margin-top: 0;
+}
+
+.wrapper {
+    max-width: 665px;
+    min-height: 480px;
+    margin: 60px auto;
+    display: flex;
+}
+
+.side {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    width: 20%;
+    background: #5A61ED;
+    position: relative;
+}
+.main {
+    width: 80%;
+    padding: 1.5rem 1.5rem;
+    background: white;
+    position: relative;
+}
+
+span {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 14px;
+    color: #7C7C7C;
+}
+
+.input, .email {
+    border: none;
+    border-bottom: 1px solid #F2F2F2;
+    outline: none;
+    font-size: 14px;
+    height: 1.5rem;
+    background: transparent;
+}
+
+.email:invalid {
+    color: red;
+    border-bottom: 2px solid red;
+}
+
+select {
+    font-family: Work Sans;
+    font-size: 14px;
+    line-height: 16px;
+    border: none;
+    border-bottom: 1px solid #F2F2F2;
+    outline: none;
+    height: 1.5rem;
+    background: transparent;
+}
+
+.selectable {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.radio {
+    font-family: Work Sans;
+    font-size: 14px;
+    margin-right: 1rem;
+}
+
+label.radio input[type="radio"] {
+    opacity:0;
+}
+
+#male, #female {
+    display: none;
+}
+ 
+label.radio input[type="radio"] ~ .design {
+    border: 1px solid #5A61ED;  
+    border-radius: 50%;
+    display: inline-block;
+    padding: 5px;
+    position: relative;
+    top: 2.5px;
+}
+ 
+label.radio input[type="radio"]:checked ~ .design {
+    border: 1px solid #5A61ED;
+}
+ 
+label.radio input[type="radio"]:checked ~ .design:after {
+    background-color: #5A61ED;
+    border-radius: 50%;
+    content: " ";
+    font-size: 1px;
+    height: 6px;
+    left: 2px;
+    position: absolute;
+    top: 2px;
+    width: 6px; 
+}
+  
+.label_form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.label {
+    width: 50%;
+    padding: .5rem 0 .7rem 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.label:nth-child(2n) {
+    padding-left: .5rem;
+}
+
+.bottom_block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5.5rem;
+}
+
+form {
+    z-index: 1;
+    position: relative;
+}
+
+.svg_man {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+}
+
+.acc_ask {
+    font-weight: 300;
+    font-size: 12.5px;
+    line-height: 15px;
+    margin-bottom: 0;
+}
+
+.complete {
+    background: #5A61ED;
+    color: white;
+    border: none;
+    outline: none;
+    font-family: PT Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    padding: .5rem 1.6rem;
+}
+
+.reg_comp {
+    display: none;
+}
